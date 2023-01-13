@@ -2,25 +2,30 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
+  let myStyle={
+    color:"white",
+    color:props.mode==="dark"?"white":"#624F82",
+    
+   }
   return (
     <nav className= {`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
     <div className="container-fluid">
-      <h4 className="mx-2 my=1" >{props.title}</h4>
+      <h4 className="mx-2 my=1" style={myStyle} >{props.title}</h4>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li className="nav-item">
-            <h6 className="mx-2 my-1" >Home</h6>
+            <h6 className="mx-2 my-1" style={myStyle}  >Home</h6>
             
            
           </li>
           <li className="nav-item">
-            <h6 className="mx-2 my-1" >{props.aboutText}</h6>
+            <h6 className="mx-2 my-1" style={myStyle} >{props.aboutText}</h6>
           </li>
           <li>
-          <h6 className="mx-2 my-1" >More</h6>
+          <h6 className="mx-2 my-1" style={myStyle} >More</h6>
           </li>
         </ul>
         {/* <ul className="dtypes">
